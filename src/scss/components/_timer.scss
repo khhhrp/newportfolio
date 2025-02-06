@@ -1,0 +1,32 @@
+@use "./src/scss/base/variables" as *;
+
+.timer {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  position: fixed;
+  top: 1vw;
+  left: 50%;
+  translate: -50%;
+  background-color: $light;
+  color: $dark;
+  padding: 4px 6px;
+  z-index: 100;
+  transition-property: background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+  min-width: 120px;
+  min-height: 20px;
+  z-index: 999;
+
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &--active {
+    color: $light;
+    background-color: $dark;
+  }
+}

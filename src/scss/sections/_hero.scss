@@ -1,0 +1,21 @@
+.hero {
+  place-content: center;
+  padding-block: 50px;
+  padding-left: 200px;
+  padding-right: 100px;
+  min-height: 100dvh;
+
+  @media (width <= 1024px) {
+    padding-left: 150px;
+  }
+
+  @media (width <= 768px) {
+    padding-left: 100px;
+    padding-right: 50px;
+  }
+
+  @media (width <= 576px) {
+    padding-left: 50px;
+    padding-right: 30px;
+  }
+}

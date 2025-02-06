@@ -1,0 +1,18 @@
+//base
+@use "./scss/base/custom-reset";
+@use "./scss/base/variables";
+@use "./scss/base/general";
+
+//components
+@use "./scss/components/timer";
+@use "./scss/components/grid";
+@use "./scss/components/keyboard";
+@use "./scss/components/menu-toggle";
+@use "./scss/components/navigation";
+@use "./scss/components/running-block";
+@use "./scss/components/media-block";
+
+//sections
+@use "./scss/sections/hero";
+@use "./scss/sections/main-section";
+@use "./scss/sections/footer";

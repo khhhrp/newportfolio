@@ -1,0 +1,193 @@
+.main-section {
+  $root: &;
+  padding: 100px;
+
+  @media (width <= 768px) {
+    padding: 60px 50px;
+  }
+
+  @media (width <= 576px) {
+    padding-inline: 20px;
+  }
+
+  &__text {
+    position: relative;
+    font-size: 30px;
+    line-height: 1.5;
+
+    @media (width < 1024px) {
+      font-size: 24px;
+      grid-column: span 3;
+    }
+
+    @media (width < 576px) {
+      font-size: 16px;
+    }
+  }
+
+  &__icons {
+    position: relative;
+    overflow: visible;
+
+    @media (width < 1024px) {
+      &--first {
+        grid-column: 4 / 5;
+      }
+
+      &--second {
+        grid-column: 1 / 2;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 60px;
+    aspect-ratio: 1;
+    position: absolute;
+
+    &:nth-child(1) {
+      rotate: -35deg;
+      bottom: 40%;
+      left: 13%;
+    }
+
+    &:nth-child(2) {
+      rotate: 15deg;
+      bottom: 0;
+      left: 20%;
+    }
+
+    &:nth-child(3) {
+      rotate: 20deg;
+      bottom: 55%;
+      left: 25%;
+    }
+
+    @media (width < 1024px) {
+      width: 40px;
+
+      &:nth-child(1) {
+        bottom: 30%;
+        left: 40%;
+      }
+
+      &:nth-child(2) {
+        bottom: 0;
+        left: 30%;
+      }
+
+      &:nth-child(3) {
+        bottom: 60%;
+        left: 36%;
+      }
+
+      &--second {
+        &:nth-child(1) {
+          bottom: 35%;
+          left: 0%;
+        }
+
+        &:nth-child(2) {
+          bottom: 10%;
+          left: 3%;
+        }
+
+        &:nth-child(3) {
+          rotate: 35deg;
+          bottom: 55%;
+          left: 30%;
+        }
+      }
+    }
+
+    @media (width < 768px) {
+      width: 30px;
+    }
+  }
+
+  &__header {
+    padding-bottom: 150px;
+
+    @media (width < 1024px) {
+      padding-bottom: 100px;
+    }
+
+    @media (width < 768px) {
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title {
+    font-size: 82px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media (width < 1024px) {
+      font-size: 62px;
+    }
+
+    @media (width < 768px) {
+      font-size: 52px;
+    }
+
+    @media (width < 576px) {
+      font-size: 38px;
+    }
+  }
+
+  &--about {
+    row-gap: 200px;
+
+    @media (width < 768px) {
+      row-gap: 120px;
+    }
+  }
+
+  &--frontloops {
+    #{$root} {
+      &__text {
+        padding-bottom: 120px;
+        grid-row: 2;
+
+        @media (width < 1024px) {
+          grid-column: 2 / 5;
+        }
+
+        @media (width < 768px) {
+          padding-bottom: 80px;
+        }
+
+        a {
+          color: #6672e5;
+        }
+      }
+    }
+  }
+
+  &--email {
+    .media-block {
+      margin-top: 120px;
+
+      @media (width < 768px) {
+        margin-top: 80px;
+      }
+    }
+
+    #{$root} {
+      &__text {
+        grid-row: 2;
+      }
+
+      @media (width < 1024px) {
+        &__icons {
+          grid-column: 1 / 2;
+        }
+
+        &__text {
+          grid-column: 2 / 5;
+        }
+      }
+    }
+  }
+}

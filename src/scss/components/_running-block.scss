@@ -1,0 +1,50 @@
+@use "./src/scss/base/variables" as *;
+
+.running-block {
+  $root: &;
+  --speed: 50;
+  --count: 3;
+  display: flex;
+
+  &__item {
+    --outset: 1;
+    --inset: -2;
+    --origin-x: calc(((var(--count) - var(--index)) + var(--inset, 0)) * 100%);
+    --destination-x: calc(calc((var(--index) + 1 + var(--outset, 0)) * -100%));
+    --duration: calc(var(--speed) * 1s);
+    --delay: calc(
+      (var(--duration) / var(--count)) *
+        (var(--index, 0) - (var(--count) * 0.5))
+    );
+    animation: slide var(--duration) calc(var(--delay) - (var(--count) * 0.5s))
+      infinite linear;
+    translate: var(--origin-x);
+    font-weight: 700;
+    font-size: 100px;
+    color: rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 500ms ease;
+    padding: 40px;
+
+    @media (hover: hover) {
+      &:hover {
+        color: $dark;
+      }
+    }
+
+    &:focus {
+      color: $dark;
+    }
+
+    @media (width < 768px) {
+      padding-block: 20px;
+    }
+  }
+}
+
+@keyframes slide {
+  100% {
+    translate: var(--destination-x);
+  }
+}

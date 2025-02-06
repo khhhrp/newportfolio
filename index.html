@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{> head }}
+  <body>
+    <div class="wrapper">
+      {{> timer }} {{> navigation }} {{> menu-toggle }}
+      <div class="grid">
+        <section class="hero">
+          <div data-col-start="1" data-col-end="4" class="keyboard">
+            <span class="tag"> &lt;h1/&gt; </span>
+            <span class="keyboard__key">f</span>
+            <span class="keyboard__key">r</span>
+            <span class="keyboard__key">o</span>
+            <span class="keyboard__key">n</span>
+            <span class="keyboard__key">t</span>
+            <span class="keyboard__key">e</span>
+            <span class="keyboard__key">n</span>
+            <span class="keyboard__key">d</span>
+          </div>
+          <div data-col-start="2" data-col-end="5" class="keyboard">
+            <span class="keyboard__key">d</span>
+            <span class="keyboard__key">e</span>
+            <span class="keyboard__key">v</span>
+            <span class="keyboard__key">e</span>
+            <span class="keyboard__key">l</span>
+            <span class="keyboard__key">o</span>
+            <span class="keyboard__key">p</span>
+            <span class="keyboard__key">e</span>
+            <span class="keyboard__key">r</span>
+          </div>
+        </section>
+        <section id="about" class="main-section main-section--about">
+          <p
+            data-col-start="1"
+            data-col-end="3"
+            class="main-section__text scroll-1"
+          >
+            <span class="tag"> &lt;p/&gt; </span>
+            Hello, I’m Vadim. I am Junior frontend developer eager to learn and
+            grow in the field, with experience in HTML, CSS, and some basic
+            JavaScript. My goal is to practice my skills on real projects, work
+            in a team, and grow in the field of web development.
+          </p>
+          <div
+            data-col-start="3"
+            data-col-end="5"
+            class="main-section__icons main-section__icons--first scroll-2"
+          >
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/html.svg"
+              alt="html"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/css.svg"
+              alt="css"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/javascript.svg"
+              alt="JavaScript"
+            />
+          </div>
+          <div
+            data-col-start="1"
+            data-col-end="3"
+            class="main-section__icons main-section__icons--second scroll-4"
+          >
+            <img
+              draggable="false"
+              class="main-section__icon main-section__icon--second"
+              src="./src/img/pug.svg"
+              alt="pug"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon main-section__icon--second"
+              src="./src/img/vite.svg"
+              alt="vite"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon main-section__icon--second"
+              src="./src/img/sass.svg"
+              alt="sass"
+            />
+          </div>
+          <p
+            data-col-start="3"
+            data-col-end="5"
+            class="main-section__text scroll-3"
+          >
+            <span class="tag"> &lt;p/&gt;</span>
+            I am already familiar with various preprocessors (SCSS), build tools
+            (Vite, Parcel, Gulp), and templating engines (Pug, Handlebars).
+            Currently, I am actively learning JavaScript and React, aiming to
+            expand my knowledge and skills to create more dynamic and
+            interactive web applications.
+          </p>
+        </section>
+        <section id="projects" class="main-section">
+          <div
+            data-col-start="1"
+            data-col-end="5"
+            class="main-section__header scroll-5"
+          >
+            <span class="tag"> &lt;h2/&gt; </span>
+            <h2 class="main-section__title">Projects</h2>
+          </div>
+          {{> media-block context=projects }}
+        </section>
+        <section id="frontloops" class="main-section main-section--frontloops">
+          <div
+            data-col-start="1"
+            data-col-end="5"
+            class="main-section__header scroll-7"
+          >
+            <span class="tag"> &lt;h3/&gt; </span>
+            <h2 class="main-section__title">
+              Markup <br />
+              Challenges
+            </h2>
+          </div>
+          <p
+            data-col-start="3"
+            data-col-end="5"
+            class="main-section__text main-section__text scroll-8"
+          >
+            <span class="tag"> &lt;p/&gt; </span>
+            In this project, I tackle layout challenges from
+            <a href="https://frontloops.io/" target="_blank">frontloops.io </a>,
+            improving my skills in HTML and CSS. I focus on responsive design,
+            Flexbox, and Grid while enhancing code structure. This helps me
+            systematize my knowledge and prepare for real-world tasks in
+            commercial development. Additionally, I use the SCSS preprocessor
+            and the BEM methodology for clean and maintainable code.
+          </p>
+          {{> media-block context=frontloops }}
+        </section>
+        <section id="email" class="main-section main-section--email">
+          <div
+            data-col-start="1"
+            data-col-end="5"
+            class="main-section__header scroll-10"
+          >
+            <span class="tag"> &lt;h4/&gt; </span>
+            <h2 class="main-section__title">
+              Email <br />
+              Templates
+            </h2>
+          </div>
+          <p
+            data-col-start="3"
+            data-col-end="5"
+            class="main-section__text main-section__text scroll-12"
+          >
+            <span class="tag"> &lt;p/&gt; </span>
+            Here, I showcase my skills in email template coding, taking into
+            account the specifics of email clients. To create emails, I use
+            table-based layout or the MJML framework. My templates render
+            correctly in popular email clients, such as Gmail, Outlook, and
+            others. I always strive to ensure maximum compatibility and correct
+            display across different platforms.
+          </p>
+          <div
+            data-col-start="1"
+            data-col-end="3"
+            class="main-section__icons scroll-11"
+          >
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/gmail.svg"
+              alt="html"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/mjml.svg"
+              alt="css"
+            />
+            <img
+              draggable="false"
+              class="main-section__icon"
+              src="./src/img/outlook.svg"
+              alt="JavaScript"
+            />
+          </div>
+          {{> media-block context=email }}
+        </section>
+        {{> footer }}
+      </div>
+    </div>
+    <script src="./src/js/script.js" type="module"></script>
+  </body>
+</html>
