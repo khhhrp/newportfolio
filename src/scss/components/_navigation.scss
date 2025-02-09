@@ -8,6 +8,7 @@
   visibility: hidden;
   transition: visibility 950ms ease, translate 450ms ease;
   overflow: hidden;
+  pointer-events: none;
 
   @media (width < 768px) {
     background-color: $light;
@@ -225,6 +226,7 @@
   &--active {
     visibility: visible;
     translate: 0;
+    pointer-events: auto;
 
     #{$root} {
       &__cell,

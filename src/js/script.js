@@ -6,7 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const navigation = document.querySelector(".navigation");
   const navigationLinks = document.querySelectorAll(".navigation__works-link");
   const mediaBlockLinks = document.querySelectorAll(".media-block__link");
-  const mqh = window.matchMedia("(hover:hover)");
+  const mqhHover = window.matchMedia("(hover:hover)");
+  const mqhPointer = window.matchMedia("(pointer: fine)");
 
   const playVideo = (video) => {
     if (video) {
@@ -56,11 +57,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   };
 
-  const videoAction = () => (mqh.matches ? addListeners() : removeListeners());
+  const videoAction = () => {
+    if (mqhHover.matches && mqhPointer.matches) {
+      addListeners();
+    } else {
+      removeListeners();
+    }
+  };
 
   videoAction();
 
-  mqh.onchange = videoAction;
+  mqhHover.onchange = videoAction;
+  mqhPointer.onchange = videoAction;
 
   const handleButtonClick = (
     button,

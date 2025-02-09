@@ -4,6 +4,7 @@
   position: relative;
   height: 80px;
   padding-inline: 50px;
+  margin-top: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,6 +14,10 @@
   line-height: 1.2;
   background-color: $dark;
   text-wrap: nowrap;
+
+  @media (width < 768px) {
+    margin-top: 100px;
+  }
 
   &__link {
     position: relative;

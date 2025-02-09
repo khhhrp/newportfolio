@@ -260,9 +260,21 @@ gsap.fromTo(
     scrollTrigger: {
       scroller: ".grid",
       trigger: ".scroll-10",
-      start: "center-=200",
+      start: "center-=400",
       end: "+=250",
       scrub: true,
     },
   }
 );
+
+document.querySelectorAll("[data-scroll]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    gsap.to(".grid", {
+      duration: 0.7,
+      scrollTo: link.getAttribute("href"),
+      ease: "power2.out",
+    });
+  });
+});
