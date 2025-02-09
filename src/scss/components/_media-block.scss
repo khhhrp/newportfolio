@@ -41,8 +41,7 @@
         #{$root} {
           &__action {
             opacity: 1;
-            scale: 1;
-            transform-origin: left center;
+            clip-path: inset(0 0 0 0);
           }
         }
       }
@@ -71,11 +70,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    scale: 0 1;
-    transform-origin: right center;
     z-index: 10;
     opacity: 0;
-    transition: scale 200ms ease, opacity 200ms ease;
+    clip-path: inset(0 100% 0 0);
+    transition-property: clip-path, opacity;
+    transition-duration: 400ms, 200ms;
+    transition-timing-function: ease, ease;
 
     img,
     video {
