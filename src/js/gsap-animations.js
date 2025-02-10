@@ -60,7 +60,7 @@ gsap.fromTo(
     scrollTrigger: {
       scroller: ".grid",
       trigger: ".hero",
-      start: "bottom-=100",
+      start: "bottom-=230",
       end: "+=250",
       scrub: true,
     },
@@ -77,7 +77,7 @@ gsap.fromTo(
     scrollTrigger: {
       scroller: ".grid",
       trigger: ".hero",
-      start: "bottom-=100",
+      start: "bottom-=230",
       end: "+=250",
       scrub: true,
     },
@@ -192,7 +192,7 @@ gsap.fromTo(
     scrollTrigger: {
       scroller: ".grid",
       trigger: ".scroll-8",
-      start: "top-=200",
+      start: "top-=300",
       end: "+=250",
       scrub: true,
     },
