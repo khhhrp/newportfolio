@@ -5,12 +5,14 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 50px;
+  padding-inline: 50px;
   background-color: $dark;
   overflow: visible;
 
   .tag {
-    margin-bottom: 15px;
+    position: absolute;
+    top: -50px;
+    left: 50px;
   }
 
   &__link {
@@ -66,21 +68,28 @@
 
   &__action {
     width: 500px;
-    height: auto;
+    height: 250px;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 10;
     opacity: 0;
     clip-path: inset(0 100% 0 0);
     transition-property: clip-path, opacity;
-    transition-duration: 400ms, 200ms;
-    transition-timing-function: ease, ease;
+    transition-duration: 320ms, 200ms;
+    transition-timing-function: ease, ease, ease;
+    z-index: 20;
+
+    @media (width <= 768px) {
+      width: 100%;
+      height: auto;
+    }
 
     img,
     video {
+      display: block;
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       pointer-events: none;
     }
   }

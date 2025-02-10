@@ -9,6 +9,7 @@ const projectsLinks = [
     name: "Fernir",
     href: "https://fernir.vercel.app/",
     videoName: "fernir",
+    videoClass: "obj-top"
   },
   {
     name: "Ecommerce",

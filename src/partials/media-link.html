@@ -19,7 +19,7 @@
     {{#if isImage}}
     <img src="./src/img/{{imageName}}.png" alt="" />
     {{else}}
-    <video loading="lazy" preload="none" muted loop playsinline>
+    <video loading="lazy" preload="none" muted loop playsinline class="{{videoClass}}">
       <source
         src="./src/video/{{videoName}}.av1.mp4"
         type="video/mp4; codecs=av01.0.05M.08,opus"
