@@ -9,7 +9,7 @@ const projectsLinks = [
     name: "Fernir",
     href: "https://fernir.vercel.app/",
     videoName: "fernir",
-    videoClass: "obj-top"
+    videoClass: "obj-top",
   },
   {
     name: "Ecommerce",
@@ -213,6 +213,7 @@ const emailLinks = [
     name: "Lottery gifts",
     href: "https://khhhrp.github.io/email-table/",
     videoName: "lottery",
+    videoClass: "obj-top",
   },
 ];
 
