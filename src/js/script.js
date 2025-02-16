@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const linkMouseMove = (e, media) => {
     if (media) {
-      media.style.transform = `translate(-50%, -50%) translate(${e.offsetX}px, ${e.offsetY}px)`;
+      media.style.transform = `translate(calc(-50% + ${e.offsetX}px), calc(-50% + ${e.offsetY}px))`;
     }
   };
 
