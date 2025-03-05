@@ -5,11 +5,11 @@ import { dirname } from "path";
 const __dirname = dirname(new URL(import.meta.url).pathname);
 
 const projectsLinks = [
-  // {
-  //   name: "Trade Blade",
-  //   href: "https://khhhrp.github.io/traffic-madness/",
-  //   videoName: "tradeblade",
-  // },
+  {
+    name: "Trade Blade",
+    href: "https://khhhrp.github.io/traffic-madness/",
+    videoName: "tradeblade",
+  },
   {
     name: "Fernir",
     href: "https://fernir.vercel.app/",
