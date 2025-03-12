@@ -17,6 +17,11 @@ const projectsLinks = [
     videoClass: "obj-top",
   },
   {
+    name: "Lumo",
+    href: "https://khhhrp.github.io/lumo/",
+    videoName: "lumo",
+  },
+  {
     name: "Ecommerce",
     href: "https://khhhrp.github.io/ecommerce/",
     videoName: "ecommerce",
